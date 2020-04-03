@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:id="@+id/parent_layout" android:padding="15dp"
+    android:layout_margin="3dp"
+    android:background="@android:color/holo_orange_light">
+
+    <TextView
+        android:id="@+id/idTextView"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="49dp"
+        android:layout_toStartOf="@+id/nameTextView"
+        android:text="id"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="213dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="4dp"
+        android:text="name"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="322dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/nameTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/username"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="309dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/idTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/email"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/phoneTextView"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/emailTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="50dp"
+        android:textSize="17sp"
+        android:text="phone" />
+
+
+</RelativeLayout>

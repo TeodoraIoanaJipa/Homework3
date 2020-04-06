@@ -1,4 +1,4 @@
-package com.example.homework3;
+package com.example.homework3.recycler_adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.homework3.DateAndTimeActivity;
+import com.example.homework3.R;
 import com.example.homework3.model.ToDoItem;
 
 import java.util.ArrayList;
@@ -20,7 +22,7 @@ public class RecyclerViewSecondAdapter extends RecyclerView.Adapter<RecyclerView
     private ArrayList<ToDoItem> todos = new ArrayList<>();
     private Context mContext;
 
-    RecyclerViewSecondAdapter(Context context, ArrayList<ToDoItem> toDoItems) {
+    public RecyclerViewSecondAdapter(Context context, ArrayList<ToDoItem> toDoItems) {
         this.todos.addAll(toDoItems);
         this.mContext = context;
     }
@@ -33,7 +35,7 @@ public class RecyclerViewSecondAdapter extends RecyclerView.Adapter<RecyclerView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         holder.titleTextView.setText(todos.get(position).getTitle());
         holder.completedTextView.setText(todos.get(position).getCompleted().toString());
         holder.idTextView.setText(todos.get(position).getId().toString());
@@ -41,8 +43,9 @@ public class RecyclerViewSecondAdapter extends RecyclerView.Adapter<RecyclerView
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(v.getContext(), DetailsActivity.class);
-//                v.getContext().startActivity(intent);
+                Intent intent = new Intent(v.getContext(), DateAndTimeActivity.class);
+                intent.putExtra("todo_title",todos.get(position).getTitle());
+                v.getContext().startActivity(intent);
             }
         });
     }

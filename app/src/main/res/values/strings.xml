@@ -2,4 +2,12 @@
     <string name="app_name">Homework3</string>
     <string name="email">email</string>
     <string name="username">username</string>
+    <string name="open_time_picker">OPEN TIME PICKER</string>
+    <string name="open_date_picker">OPEN DATE PICKER</string>
+    <string name="create_alarm">create alarm</string>
+    <string name="todos">TODOS:</string>
+    <string name="id">id</string>
+    <string name="title">title</string>
+    <string name="name">name</string>
+    <string name="no_time_picked">No time picked.</string>
 </resources>

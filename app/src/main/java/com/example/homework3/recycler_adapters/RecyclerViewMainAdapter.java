@@ -1,4 +1,4 @@
-package com.example.homework3;
+package com.example.homework3.recycler_adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,6 +13,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.homework3.R;
+import com.example.homework3.ToDoListFragment;
 import com.example.homework3.model.User;
 
 import java.util.ArrayList;

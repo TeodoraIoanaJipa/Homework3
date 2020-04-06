@@ -14,21 +14,21 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.homework3.model.User;
+import com.example.homework3.recycler_adapters.RecyclerViewMainAdapter;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.util.ArrayList;
 
-public class UsersFragmentActivity extends Fragment {
+public class UsersFragment extends Fragment {
 
-    private String url = "https://jsonplaceholder.typicode.com/users";
+    private final static String URL = "https://jsonplaceholder.typicode.com/users";
     private ArrayList<User> usersList = new ArrayList<>();
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.users_fragment, container, false);
-        return view;
+        return inflater.inflate(R.layout.users_fragment, container, false);
     }
 
     @Override
@@ -46,7 +46,7 @@ public class UsersFragmentActivity extends Fragment {
     }
 
     private void getUsers() {
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
 
             @Override
             public void onResponse(JSONArray response) {

@@ -16,11 +16,13 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.homework3.model.ToDoItem;
+import com.example.homework3.recycler_adapters.RecyclerViewSecondAdapter;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ToDoListFragment extends Fragment {
 
@@ -30,6 +32,7 @@ public class ToDoListFragment extends Fragment {
 
     public ToDoListFragment(int userId) {
         this.userId = userId;
+
     }
 
     @Override
@@ -55,7 +58,6 @@ public class ToDoListFragment extends Fragment {
     private void getTODOItems(){
 
         JsonArrayRequest jsonArrayRequest  = new JsonArrayRequest(url+userId, new Response.Listener<JSONArray>() {
-
             @Override
             public void onResponse(JSONArray response) {
                 for(int index = 0;index<response.length();index++){
@@ -75,7 +77,7 @@ public class ToDoListFragment extends Fragment {
             }
         });
 
-        VolleySingleton.getInstance(getView().getContext()).addToRequestQueue(jsonArrayRequest);
+        VolleySingleton.getInstance(Objects.requireNonNull(getView()).getContext()).addToRequestQueue(jsonArrayRequest);
 
     }
 

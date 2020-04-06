@@ -6,7 +6,7 @@
     android:padding="10dp">
 
     <TextView
-        android:id="@+id/time_text_view"
+        android:id="@+id/time_textview"
         android:text="@string/no_time_picked"
         android:textSize="25sp"
         android:layout_width="match_parent"

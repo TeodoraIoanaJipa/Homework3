@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".DateAndTimeActivity">
 
-    <fragment
+    <FrameLayout
         android:id="@+id/notification_fragment"
         android:name="com.example.homework3.NotificationFragment"
         android:layout_width="match_parent"
